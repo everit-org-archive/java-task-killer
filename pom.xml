@@ -30,7 +30,7 @@
     </parent>
     <groupId>org.everit.tools</groupId>
     <artifactId>java-task-killer</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Java Task Killer</name>
     <description>A command line utility to kill java processes based on different parameters. This tool can be used integrated but also in distribution packages.</description>
