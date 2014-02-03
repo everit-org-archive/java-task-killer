@@ -1,98 +1,89 @@
 <?xml version="1.0"?>
 <!--
 
-    Copyright (c) 2011, Everit Kft.
+    This file is part of Everit - Java Task Killer.
 
-    All rights reserved.
+    Everit - Java Task Killer is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License as published by the Free Software Foundation; either
-    version 3 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
+    Everit - Java Task Killer is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Lesser General Public License for more details.
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
 
-    You should have received a copy of the GNU Lesser General Public
-    License along with this library; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-    MA 02110-1301  USA
+    You should have received a copy of the GNU Lesser General Public License
+    along with Everit - Java Task Killer.  If not, see <http://www.gnu.org/licenses/>.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.everit</groupId>
-        <artifactId>oss</artifactId>
-        <version>4</version>
-    </parent>
-    <groupId>org.everit.tools</groupId>
-    <artifactId>java-task-killer</artifactId>
-    <version>1.0.0</version>
-    <packaging>jar</packaging>
-    <name>Java Task Killer</name>
-    <description>A command line utility to kill java processes based on different parameters. This tool can be used integrated but also in distribution packages.</description>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.everit.config</groupId>
+    <artifactId>org.everit.config.oss</artifactId>
+    <version>5.0.0</version>
+  </parent>
 
-    <scm>
-        <connection>scm:git:git://github.com/everit-org/java-task-killer.git</connection>
-        <developerConnection>scm:git:https://github.com/everit-org/java-task-killer.git</developerConnection>
-        <url>https://github.com/everit-org/java-task-killer</url>
-    </scm>
-    <url>${everit.public.site.url}/java-task-killer</url>
-    <distributionManagement>
-        <site>
-            <id>everit.org</id>
-            <url>dav:${everit.public.site.url}/java-task-killer</url>
-        </site>
-    </distributionManagement>
-    <ciManagement>
-        <system>Jenkins</system>
-        <url>https://ci.everit.biz/jenkins/job/java-task-killer</url>
-    </ciManagement>
-    <issueManagement>
-            <system>GitHub</system>
-            <url>https://github.com/everit-org/java-task-killer/issues</url>
-    </issueManagement>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.everit.tools.javataskkiller.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    
-    <repositories>
-        <repository>
-            <id>everit.groups.public</id>
-            <name>Everit Public Repository Group</name>
-            <url>http://repository.everit.biz/nexus/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>everit.groups.proxy</id>
-            <name>Everit Proxy Repository Group</name>
-            <url>http://repository.everit.biz/nexus/content/groups/proxy</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+  <groupId>org.everit.tools</groupId>
+  <artifactId>org.everit.tools.java-task-killer</artifactId>
+  <version>2.0.0</version>
+
+  <packaging>jar</packaging>
+
+  <name>Everit - Java Task Killer</name>
+  <description>Command line utility to kill java process based on the command that was used to start the process.</description>
+
+  <scm>
+    <connection>scm:git:git://github.com/everit-org/java-task-killer.git</connection>
+    <developerConnection>scm:git:https://github.com/everit-org/java-task-killer.git</developerConnection>
+    <url>https://github.com/everit-org/java-task-killer</url>
+  </scm>
+
+  <url>${everit.public.site.url}</url>
+
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://ci.everit.biz/jenkins/job/java-task-killer</url>
+  </ciManagement>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/everit-org/java-task-killer/issues</url>
+  </issueManagement>
+
+  <organization>
+    <name>Everit Kft.</name>
+    <url>http://www.everit.biz</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License v3.0</name>
+      <url>http://opensource.org/licenses/LGPL-3.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>org.everit.tools.javataskkiller.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
